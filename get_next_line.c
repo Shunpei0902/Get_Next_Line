@@ -6,7 +6,7 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 13:20:37 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/11 00:34:00 by sasano           ###   ########.fr       */
+/*   Updated: 2023/11/22 02:00:52 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char	*get_line(int fd, char *tmp)
 			return (NULL);
 		}
 		buffer[bytesRead] = '\0';
-		tmp = ft_strjoin(tmp, buffer);
+		tmp = gnl_strjoin(tmp, buffer);
 	}
 	free(buffer);
 	return (tmp);

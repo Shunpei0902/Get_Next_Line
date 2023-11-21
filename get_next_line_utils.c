@@ -6,15 +6,15 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 13:22:23 by sasano            #+#    #+#             */
-/*   Updated: 2023/10/11 00:02:34 by sasano           ###   ########.fr       */
+/*   Updated: 2023/11/22 02:02:12 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int	ft_strlen(char *str)
+size_t	gnl_strlen(char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (!str)
@@ -24,13 +24,13 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-char	*ft_strjoin(char *tmp, char *buffer)
+char	*gnl_strjoin(char *tmp, char *buffer)
 {
 	char	*str;
 	int		i;
 	int		j;
 
-	str = malloc(sizeof(char) * (ft_strlen(tmp) + ft_strlen(buffer) + 1));
+	str = malloc(sizeof(char) * (gnl_strlen(tmp) + gnl_strlen(buffer) + 1));
 	if (!str)
 		return (NULL);
 	i = 0;
@@ -108,7 +108,7 @@ char	*new_tmp(char *tmp)
 		return (NULL);
 	}
 	i++;
-	new_tmp = malloc(sizeof(char) * (ft_strlen(tmp) - i + 1));
+	new_tmp = malloc(sizeof(char) * (gnl_strlen(tmp) - i + 1));
 	if (!new_tmp)
 		return (NULL);
 	j = 0;
