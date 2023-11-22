@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 13:20:37 by sasano            #+#    #+#             */
-/*   Updated: 2023/11/22 09:41:51 by sasano           ###   ########.fr       */
+/*   Created: 2023/11/22 09:07:21 by sasano            #+#    #+#             */
+/*   Updated: 2023/11/22 09:41:58 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 void	error(char *buffer, char *tmp)
 {
@@ -45,16 +45,16 @@ char	*get_line(int fd, char *tmp)
 
 char	*get_next_line(int fd)
 {
-	static char	*tmp;
+	static char	*tmp[OPEN_MAX];
 	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	tmp = get_line(fd, tmp);
-	if (!tmp)
+	tmp[fd] = get_line(fd, tmp[fd]);
+	if (!tmp[fd])
 		return (NULL);
-	line = take_out_line(tmp);
-	tmp = new_tmp(tmp);
+	line = take_out_line(tmp[fd]);
+	tmp[fd] = new_tmp(tmp[fd]);
 	return (line);
 }
 

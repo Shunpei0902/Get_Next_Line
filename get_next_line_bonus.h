@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/10 13:57:29 by sasano            #+#    #+#             */
-/*   Updated: 2023/11/22 09:31:14 by sasano           ###   ########.fr       */
+/*   Created: 2023/11/22 09:08:14 by sasano            #+#    #+#             */
+/*   Updated: 2023/11/22 09:15:07 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
 # include <fcntl.h>
 # include <stdio.h>
+# include <limits.h>
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
