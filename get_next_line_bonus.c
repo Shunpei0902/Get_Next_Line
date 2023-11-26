@@ -6,7 +6,7 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 09:07:21 by sasano            #+#    #+#             */
-/*   Updated: 2023/11/22 09:41:58 by sasano           ###   ########.fr       */
+/*   Updated: 2023/11/26 22:15:34 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,29 +58,29 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-// int	main(void)
-// {
-// 	char *line;
-// 	int fd;
-// 	int fd1;
+int	main(void)
+{
+	char *line;
+	int fd;
+	int fd1;
 
-// 	fd = open("test.txt", O_RDONLY);
-// 	fd1 = open("test1.txt", O_RDONLY);
-// 	line = get_next_line(4);
-// 	printf("read:%s\n", line);
-// 	line = get_next_line(fd);
-// 	printf("read:%s\n", line);
-// 	line = get_next_line(fd1);
-// 	printf("read:%s\n", line);
-// 	line = get_next_line(fd);
-// 	printf("read:%s\n", line);
-// 	line = get_next_line(fd1);
-// 	printf("read:%s\n", line);
-// 	line = get_next_line(fd);
-// 	printf("read:%s\n", line);
-// 	line = get_next_line(fd1);
-// 	printf("read:%s\n", line);
-// 	close(fd);
-// 	close(fd1);
-// 	return (0);
-// }
+	fd = open("test.txt", O_RDONLY);
+	fd1 = open("test1.txt", O_RDONLY);
+	line = get_next_line(4);
+	printf("read:%s\n", line);
+	line = get_next_line(fd);
+	printf("read:%s\n", line);
+	line = get_next_line(fd1);
+	printf("read:%s\n", line);
+	line = get_next_line(fd);
+	printf("read:%s\n", line);
+	line = get_next_line(fd1);
+	printf("read:%s\n", line);
+	line = get_next_line(fd);
+	printf("read:%s\n", line);
+	line = get_next_line(fd1);
+	printf("read:%s\n", line);
+	close(fd);
+	close(fd1);
+	return (0);
+}

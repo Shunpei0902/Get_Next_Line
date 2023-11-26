@@ -6,7 +6,7 @@
 /*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 13:22:23 by sasano            #+#    #+#             */
-/*   Updated: 2023/11/22 09:28:18 by sasano           ###   ########.fr       */
+/*   Updated: 2023/11/26 22:14:24 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,8 @@ char	*take_out_line(char *tmp)
 	if (!tmp[i])
 		return (NULL);
 	while (tmp[i] && tmp[i] != '\n')
+		i++;
+	if (tmp[i] == '\n')
 		i++;
 	line = malloc(sizeof(char) * (i + 1));
 	if (!line)
