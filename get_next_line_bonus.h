@@ -6,7 +6,7 @@
 /*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 09:08:14 by sasano            #+#    #+#             */
-/*   Updated: 2023/11/27 11:27:54 by sasano           ###   ########.fr       */
+/*   Updated: 2023/11/27 14:28:07 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,6 @@
 # endif
 
 char	*get_next_line(int fd);
-char	*get_line(int fd, char *tmp);
-void	error(char *buffer, char *tmp);
 int		judge_read(char *tmp);
 char	*take_out_line(char *tmp);
 char	*gnl_strjoin(char *tmp, char *buffer);

@@ -6,20 +6,13 @@
 /*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 13:20:37 by sasano            #+#    #+#             */
-/*   Updated: 2023/11/27 11:26:07 by sasano           ###   ########.fr       */
+/*   Updated: 2023/11/27 14:27:08 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-void	error(char *buffer, char *tmp)
-{
-	free(buffer);
-	if (tmp)
-		free(tmp);
-}
-
-char	*get_line(int fd, char *tmp)
+static char	*get_line(int fd, char *tmp)
 {
 	char	*buffer;
 	ssize_t	bytesread;
