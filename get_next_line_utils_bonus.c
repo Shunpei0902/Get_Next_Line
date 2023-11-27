@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
+/*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 09:09:20 by sasano            #+#    #+#             */
-/*   Updated: 2023/11/26 22:14:07 by sasano           ###   ########.fr       */
+/*   Updated: 2023/11/27 11:28:28 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,12 +80,9 @@ char	*take_out_line(char *tmp)
 	line = malloc(sizeof(char) * (i + 1));
 	if (!line)
 		return (NULL);
-	i = 0;
-	while (tmp[i] != '\n' && tmp[i] != '\0')
-	{
+	i = -1;
+	while (tmp[++i] != '\n' && tmp[i] != '\0')
 		line[i] = tmp[i];
-		i++;
-	}
 	if (tmp[i] == '\n')
 	{
 		line[i] = tmp[i];

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
+/*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 13:20:37 by sasano            #+#    #+#             */
-/*   Updated: 2023/11/26 22:15:21 by sasano           ###   ########.fr       */
+/*   Updated: 2023/11/27 11:26:07 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,21 +22,21 @@ void	error(char *buffer, char *tmp)
 char	*get_line(int fd, char *tmp)
 {
 	char	*buffer;
-	ssize_t	bytesRead;
+	ssize_t	bytesread;
 
 	buffer = malloc(sizeof(char) * (BUFFER_SIZE + (size_t)1));
 	if (!buffer)
 		return (NULL);
-	bytesRead = 1;
-	while (judge_read(tmp) && bytesRead != 0)
+	bytesread = 1;
+	while (judge_read(tmp) && bytesread != 0)
 	{
-		bytesRead = read(fd, buffer, BUFFER_SIZE);
-		if (bytesRead == -1)
+		bytesread = read(fd, buffer, BUFFER_SIZE);
+		if (bytesread == -1)
 		{
 			free(buffer);
 			return (NULL);
 		}
-		buffer[bytesRead] = '\0';
+		buffer[bytesread] = '\0';
 		tmp = gnl_strjoin(tmp, buffer);
 	}
 	free(buffer);

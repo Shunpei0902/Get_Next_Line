@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasano <shunkotkg0141@gmail.com>           +#+  +:+       +#+        */
+/*   By: sasano <sasano.stu>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/10 13:57:29 by sasano            #+#    #+#             */
-/*   Updated: 2023/11/26 21:59:15 by sasano           ###   ########.fr       */
+/*   Updated: 2023/11/27 11:27:56 by sasano           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,12 @@
 #  define BUFFER_SIZE 100
 # endif
 
-char	*get_next_line(int);
-char	*get_line(int, char *);
-void	error(char *, char *);
-int		judge_read(char *);
-char	*take_out_line(char *);
-char	*gnl_strjoin(char *, char *);
-char	*new_tmp(char *);
+char	*get_next_line(int fd);
+char	*get_line(int fd, char *tmp);
+void	error(char *buffer, char *tmp);
+int		judge_read(char *tmp);
+char	*take_out_line(char *tmp);
+char	*gnl_strjoin(char *tmp, char *buffer);
+char	*new_tmp(char *tmp);
 
 #endif
